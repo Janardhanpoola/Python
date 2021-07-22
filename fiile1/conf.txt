@@ -1,0 +1,13 @@
+config_bgp
+    ARGS
+        action set
+        groups ''
+        logical-systems ''
+        routing-instances ''
+    CONFIG
+        var['action']
+            var['groups'] var['logical-systems'] var['routing-instances'] protocols
+                bgp
+                    var['protocol-bgp-action']
+                    accept-remote-nexthop
+                        var['accept-remote-nexthop']
